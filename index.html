@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  	<link rel="stylesheet" href="css/style.css">
+  	<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+  	<script type="text/javascript" src="js/myPortfolio.js"></script>
+    <title>César Fraisseix</title>
+  </head>
+  <body ng-app="portfolio" ng-controller="NavBarController as navCtrl">
+		<div class="panel-wrapper fade" id="profile" ng-show="navCtrl.isSet(1)">
+			<div class="panel">
+				<div class="row">
+					<div class="profile-upper col-s-12 col-6" id="imgWrapper">
+						<a href="https://fr.linkedin.com/in/cesarfraisseix" target="_blank">
+							<img src="images/linkedin.png" class="social-network-button" id="linkedin-button">
+						</a>
+						<a href="http://www.google.com" target="_blank">
+							<img src="images/twitter.png" class="social-network-button" id="twitter-button">
+						</a>
+						<a href="http://www.google.com" target="_blank">
+							<img src="images/github.png" class="social-network-button" id="github-button">
+						<a/>
+						<img src="images/baseHDTransparent2.png" alt="A wonderful picture of my face" id="myPic">
+					</div>
+					<div class="profile-lower col-s-12 col-6">
+						<p id="name">
+							César Fraisseix
+						</p>
+						<span class="strikethrough">
+							<p id="desc">
+								Concepteur/Développeur d'Applications
+							</p>
+						</span>
+						<img src="images/scratch.png" id="scratch">
+						<img src="images/arrow.png" id="arrow">
+						<p id="desc2">
+							Passionné, Créatif, Enthousiaste
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-wrapper fade" id="skills" ng-show="navCtrl.isSet(2)" ng-controller="SkillsController as skillsCtrl">
+			<h2 ng-show="skillsCtrl.isSet(0)" ng-class="{greenSkill: hover}">Java</h2>
+			<h2 ng-show="skillsCtrl.isSet(1)" ng-class="{greenSkill: hover}">HTML5</h2>
+			<h2 ng-show="skillsCtrl.isSet(2)" ng-class="{greenSkill: hover}">CSS3</h2>
+			<h2 ng-show="skillsCtrl.isSet(3)" ng-class="{greenSkill: hover}">Android</h2>
+			<h2 ng-show="skillsCtrl.isSet(4)" ng-class="{greenSkill: hover}">AngularJS</h2>
+			<h2 ng-show="skillsCtrl.isSet(5)" ng-class="{greenSkill: hover}">PHP</h2>
+			<h2 ng-show="skillsCtrl.isSet(6)" ng-class="{greenSkill: hover}">NodeJS</h2>
+			<h2 ng-show="skillsCtrl.isSet(7)" ng-class="{greenSkill: hover}">Javascript</h2>
+			<div class="panel" id="skills-panel">
+					<div class="row">
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/java.png" alt="Java" class="lvl-100" ng-mouseenter="skillsCtrl.setSkill(0); hover=true" ng-mouseleave="hover=false">
+								<p>100%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/html5.png" alt="Html5" class="lvl-100" ng-mouseenter="skillsCtrl.setSkill(1); hover=true" ng-mouseleave="hover=false">
+								<p>100%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/css3.png" alt="CSS3" class="lvl-100" ng-mouseenter="skillsCtrl.setSkill(2); hover=true" ng-mouseleave="hover=false">
+								<p>100%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/android.png" alt="Android" class="lvl-75" ng-mouseenter="skillsCtrl.setSkill(3); hover=true" ng-mouseleave="hover=false">
+								<p>75%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/angularJS.png" alt="AngularJS" class="lvl-75" ng-mouseenter="skillsCtrl.setSkill(4); hover=true" ng-mouseleave="hover=false">
+								<p>75%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/php.png" alt="PHP" class="lvl-75" ng-mouseenter="skillsCtrl.setSkill(5); hover=true" ng-mouseleave="hover=false">
+								<p>75%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/nodejs.png" alt="NodeJS" class="lvl-50" ng-mouseenter="skillsCtrl.setSkill(6); hover=true" ng-mouseleave="hover=false">
+								<p>50%</p>
+							</div>
+						</div>
+						<div class="col-3 col-s-6 col-m-4">
+							<div class="card" >
+								<img src="images/js.png" alt="Javascript" class="lvl-25" ng-mouseenter="skillsCtrl.setSkill(7); hover=true" ng-mouseleave="hover=false">
+								<p>25%</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="panel-wrapper fade" id="timeline" ng-show="navCtrl.isSet(3)">
+		
+		</div>
+		<div class="panel-wrapper fade" id="contacts" ng-show="navCtrl.isSet(4)">
+			
+		</div>
+	
+		<div class="navBar" id="navBar">
+			<ul>
+				<a href="#">
+				 	<li ng-click="navCtrl.setTab(1)" ng-class="{active: navCtrl.isSet(1)}">
+		 			 		<p href="#" class="tabText">Profil</p>
+		 		 	</li>
+		 		</a>
+		 		<a href="#">
+					<li ng-click="navCtrl.setTab(2)" ng-class="{active: navCtrl.isSet(2)}">
+						<p href="#" class="tabText">Compétences</p>
+					</li>
+				</a>
+		 		<a href="#">
+					<li ng-click="navCtrl.setTab(3)" ng-class="{active: navCtrl.isSet(3)}">
+						<p href="#" class="tabText">Projets</p>
+					</li>
+				</a>
+		 		<a href="#">
+					<li ng-click="navCtrl.setTab(4)" ng-class="{active: navCtrl.isSet(4)}">
+						<p href="#" class="tabText">Contact</p>
+					</li>
+				</a>
+			</ul>
+		</div> 
+	</body>
+</html>
+

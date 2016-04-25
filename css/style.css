@@ -1,0 +1,692 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: mainFont-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: mainFont-Light-Italic;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: mainFont-Black;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: script;
+    src: url(../fonts/constellation.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ body{
+ 	font-family: mainFont;
+ 	background-color: black;
+}
+
+ul {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	list-style-type: none;
+}
+
+li {
+}
+
+a {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-family: mainFont;
+	font-size: 100%;
+}
+
+.card {
+	padding: 20px;
+	margin: 10px;
+	background-color: rgba(0, 0, 0, 0);
+	visibility: initial;
+}
+
+.panel-wrapper {
+	position: fixed;
+	width: 100vw;
+  height: 100vh;
+	float: left;
+	margin: 0;
+  /*padding: 1% 5% 1% 20%;*/
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition:1s ease-in-out all;
+}
+
+.panel-wrapper#profile {
+	background-image: url("../images/bg1dark.jpg");
+	background-repeat: no-repeat;
+}
+
+.panel-wrapper#skills {
+	background-image: url("../images/bg2.jpg");
+	background-repeat: no-repeat;
+}
+
+.panel-wrapper#timeline {
+	background-image: url("../images/bg3dark.jpg");
+	background-repeat: no-repeat;
+}
+.panel-wrapper#contacts {
+	background-image: url("../images/bg4dark.jpg");
+	background-repeat: no-repeat;
+}
+
+.panel-wrapper#skills h2{
+	position: absolute;
+	font-family: mainFont-Light;
+	width: 100%;
+	text-align: center;
+	margin: 5vh auto;
+	color: #E6E6E6;
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.panel-wrapper#skills h2.ng-hide {
+	opacity: 0;
+	filter: blur(2px);
+}
+
+.panel-wrapper#skills h2.greenSkill {
+	color: rgba(76, 175, 80, 1);
+}
+
+.panel {
+	position: relative;
+	width: 100%;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.helper{
+	position: relative;
+}
+
+.profile-upper .social-network-button {
+	position: absolute;
+	width: 1cm;
+	left: 48.5%;
+	top:45%;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color:  rgba(76, 175, 80, 0);
+	transition: all 0.3s;
+}
+
+.profile-upper .social-network-button:hover {
+	border-color:  rgba(76, 175, 80, 1);
+}
+
+@keyframes linkedin {
+    from {
+    		-ms-transform-origin: 420% -260%;
+    		-webkit-transform-origin: 420% -260%;
+    		transform-origin: 420% -260%;
+    	}
+    to {
+    		-ms-transform-origin: 420% -260%;
+    		-webkit-transform-origin: 420% -260%;
+    		transform-origin: 420% -260%;
+    		-ms-transform: rotate(360deg);
+    		-webkit-transform: rotate(360deg);
+    		transform: rotate(360deg);
+    }
+}
+
+@keyframes twitter {
+    from {
+    		-ms-transform-origin: 50% 540%;
+    		-webkit-transform-origin: 50% 540%;
+    		transform-origin: 50% 540%;
+    	}
+    to {
+    		-ms-transform-origin: 50% 540%;
+    		-webkit-transform-origin: 50% 540%;
+    		transform-origin: 50% 540%;
+    		-ms-transform: rotate(360deg);
+    		-webkit-transform: rotate(360deg);
+    		transform: rotate(360deg);
+    }
+}
+
+@keyframes github {
+    from {
+    		-ms-transform-origin: -330% -260%;
+    		-webkit-transform-origin: -330% -260%;
+    		transform-origin: -330% -260%;
+    	}
+    to {
+    		-ms-transform-origin: -330% -260%;
+    		-webkit-transform-origin: -330% -260%;
+    		transform-origin: -330% -260%;
+    		-ms-transform: rotate(360deg);
+    		-webkit-transform: rotate(360deg);
+    		transform: rotate(360deg);
+    }
+}
+
+.profile-upper .social-network-button#linkedin-button{
+	margin-left: -4cm;
+	margin-top: 3cm;
+	-ms-animation-name: linkedin;
+    -ms-animation-duration: 24s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-name: linkedin;
+    -webkit-animation-duration: 24s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: linkedin;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.profile-upper .social-network-button#twitter-button{
+
+	margin-top: -5cm;
+	margin-left: -2%;
+	-ms-animation-name: twitter;
+    -ms-animation-duration: 24s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-name: twitter;
+    -webkit-animation-duration: 24s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: twitter;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.profile-upper .social-network-button#github-button{
+	margin-left: 3.5cm;
+	margin-top: 3cm;
+	-ms-animation-name: github;
+    -ms-animation-duration: 24s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-name: github;
+    -webkit-animation-duration: 24s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: github;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.profile-upper #myPic {
+	display: block;
+	margin: 0 auto;
+	width: 7cm;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #4caf50;
+	background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 75%);
+}
+
+@media only screen and (max-width: 25cm) {
+	
+	@keyframes linkedin {
+	    from {
+	    		-ms-transform-origin: 315% -125%;
+	    		-webkit-transform-origin: 315% -125%;
+	    		transform-origin: 315% -125%;
+	    	}
+	    to {
+	    		-ms-transform-origin: 315% -125%;
+	    		-webkit-transform-origin: 315% -125%;
+	    		transform-origin: 315% -125%;
+	    		-ms-transform: rotate(360deg);
+    			-webkit-transform: rotate(360deg);
+    			transform: rotate(360deg);
+	    }
+	}
+
+	@keyframes twitter {
+	    from {
+	    		-ms-transform-origin: 45% 380%;
+	    		-webkit-transform-origin: 45% 380%;
+	    		transform-origin: 45% 380%;
+	    	}
+	    to {
+	    		-ms-transform-origin: 45% 380%;
+	    		-webkit-transform-origin: 45% 380%;
+	    		transform-origin: 45% 370%;
+	    		-ms-transform: rotate(360deg);
+    			-webkit-transform: rotate(360deg);
+	    		transform: rotate(360deg);
+	    }
+	}
+
+	@keyframes github {
+	    from {
+	    		-ms-transform-origin: -230% -125%;
+	    		-webkit-transform-origin: -230% -125%;
+	    		transform-origin: -230% -125%;
+	    	}
+	    to {	-ms-transform-origin: -230% -125%;
+	    		-webkit-transform-origin: -230% -125%;
+	    		transform-origin: -230% -125%;
+	    		-ms-transform: rotate(360deg);
+    			-webkit-transform: rotate(360deg);
+	    		transform: rotate(360deg);
+	    }
+	}
+
+	.profile-upper .social-network-button {
+		width: 12.5%
+		top: 50%;
+	}
+
+	.profile-upper .social-network-button#linkedin-button{
+		margin-left: -2.8cm;
+		margin-top: 1.5cm;
+		-ms-animation-name: linkedin;
+	    -ms-animation-duration: 24s;
+	    -ms-animation-iteration-count: infinite;
+	    -ms-animation-timing-function: linear;
+	    -webkit-animation-name: linkedin;
+	    -webkit-animation-duration: 24s;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-timing-function: linear;
+		animation-name: linkedin;
+	    animation-duration: 24s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	}
+
+	.profile-upper .social-network-button#twitter-button{
+
+		margin-top: -3.5cm; 
+		-ms-animation-name: twitter;
+	    -ms-animation-duration: 24s;
+	   	-ms-animation-iteration-count: infinite;
+	    -ms-animation-timing-function: linear;
+	    -webkit-animation-name: twitter;
+	    -webkit-animation-duration: 24s;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-timing-function: linear;
+		animation-name: twitter;
+	    animation-duration: 24s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	}
+
+	.profile-upper .social-network-button#github-button{
+		margin-left: 2.7cm;
+		margin-top: 1.5cm;
+		-ms-animation-name: github;
+	    -ms-animation-duration: 24s;
+	    -ms-animation-iteration-count: infinite;
+	    -ms-animation-timing-function: linear;
+	    -webkit-animation-name: github;
+	    -webkit-animation-duration: 24s;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-timing-function: linear;
+	    animation-name: github;
+	    animation-duration: 24s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	}
+
+	.profile-upper #myPic {
+		width: 5cm;
+	}
+}
+
+
+
+.profile-upper {
+	position: relative;
+	margin-bottom: 5%;
+	width: 100%;
+}
+
+.profile-lower {
+	position: relative;
+	width: 100%;
+}
+
+.profile-lower p#name {
+	font-family: mainFont-Light;
+	letter-spacing: 0.25vw;
+	font-size: 250%;
+	color: #E6E6E6;
+	text-align: center;
+	line-height: 130%;
+	margin-bottom: 3vh;
+
+}
+
+.profile-lower p#desc {
+	font-family: mainFont;
+	font-size: 150%;
+	color: #4caf50;
+	text-align: center;
+	line-height: 130%;
+	margin-bottom: 10px;
+}
+
+.profile-lower img#arrow {
+	position: relative;
+	width: 4vh;
+	left: 50%;
+	opacity: 0.8;
+}
+.profile-lower img#scratch {
+	position: absolute;
+	left: 25%;
+	top: 33%;
+	height: 4vh;
+	opacity: 0.8;
+}
+
+.profile-lower p#desc2 {
+	font-family: script;
+	font-size: 500%;
+	color: #4caf50;
+	text-align: center;
+	line-height: 50%;
+}
+
+[class*="col-"] {
+	float: left;
+    height: 100%;
+}
+
+
+/* For Mobile */
+@media only screen and (max-width: 12cm) {
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+
+	.profile-lower p#name {
+		font-family: mainFont-Light;
+		letter-spacing: 0.25vw;
+		font-size: 200%;
+		color: #E6E6E6;
+		text-align: center;
+		line-height: 130%;
+		margin-bottom: 3vh;
+
+	}
+
+	.profile-lower p#desc {
+		font-family: mainFont;
+		font-size: 100%;
+		color: #4caf50;
+		text-align: center;
+		line-height: 130%;
+		margin-bottom: 10px;
+	}
+
+	.profile-lower span.strikethrough {
+		color: #E6E6E6;
+		text-decoration: line-through;
+	}
+
+	.profile-lower img#scratch {
+		display: none;
+	}
+
+	.profile-lower img#arrow {
+		position: relative;
+		width: 3vh;
+		left: 50%;
+		opacity: 0.8;
+	}
+
+	.profile-lower p#desc2 {
+		font-family: script;
+		font-size: 400%;
+		color: #4caf50;
+		text-align: center;
+		line-height: 50%;
+	}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 25cm){
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+
+	.profile-lower {
+		position: relative;
+		left: -10%;
+	}
+
+}
+
+/* For tablets: */
+@media only screen and (min-width: 12cm) and (max-width: 25cm) {
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+
+	.profile-lower span.strikethrough {
+		color: #E6E6E6;
+		text-decoration: line-through;
+	}
+	.profile-lower img#scratch {
+		display: none;
+	}
+
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#skills-panel .card{
+	width: 50%;
+	margin: 2% auto;
+	color: #E6E6E6;
+	transition: all, 0.5s ease-in-out;
+}
+
+#skills-panel .card img {
+	width:100%;
+	height: auto;
+}
+
+#skills-panel .card p {
+	width:100%;
+	height: auto;
+	color: rgba(76, 175, 80, 0);
+	text-align: center;
+	transition: all 0.35s ease-in-out;
+}
+
+#skills-panel .card:hover p {
+	color: rgba(76, 175, 80, 1);
+}
+
+#skills-panel .card:hover .lvl-0 {
+	border-color: rgba(0, 0, 0, 0);
+}
+#skills-panel .card:hover .lvl-25 {
+	border-bottom-color: rgba(0, 0, 0, 0);
+	border-left-color: rgba(76, 175, 80, 1);
+	border-right-color: rgba(0, 0, 0, 0);
+	border-top-color: rgba(0, 0, 0, 0);
+}
+#skills-panel .card:hover .lvl-50 {
+	border-bottom-color: rgba(76, 175, 80, 1);
+	border-left-color: rgba(76, 175, 80, 1);
+	border-right-color: rgba(0, 0, 0, 0);
+	border-top-color: rgba(0, 0, 0, 0);
+}
+#skills-panel .card:hover .lvl-75 {
+	border-bottom-color: rgba(76, 175, 80, 1);
+	border-left-color: rgba(76, 175, 80, 1);
+	border-right-color: rgba(76, 175, 80, 1);
+	border-top-color: rgba(0, 0, 0, 0);
+}
+#skills-panel .card:hover .lvl-100 {
+	border-bottom-color: rgba(76, 175, 80, 1);
+	border-left-color: rgba(76, 175, 80, 1);
+	border-right-color: rgba(76, 175, 80, 1);
+	border-top-color: rgba(76, 175, 80, 1);
+}
+
+#skills-panel .card [class*="lvl-"] {
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color:  rgba(76, 175, 80, 0);
+	filter: blur(1px);
+	transition: all 0.35s ease-in-out;
+}
+
+#skills-panel .card:hover [class*="lvl-"] {
+	filter: blur(0px);
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.row {
+}
+
+.navBar {
+	
+}
+
+.navBar ul {
+	position: fixed;
+	height: 3vh;
+	left: 0;
+	right: 0;
+	list-style-type: none;
+	margin: 0 auto;
+	bottom: 0%;
+	padding: 0;
+	min-height: 2em;
+	width: 100%;
+}
+
+
+.navBar li {
+  	float: left;
+  	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: linear-gradient(to top, rgba(10, 10, 10, 1),  rgba(0, 0, 0, 0));
+	text-align: center;
+	width: 25vw;
+	
+}
+
+.navBar li p {
+	color: #E6E6E6;
+	font-family: mainFont;
+	text-decoration: none;
+	outline: none;
+	transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 12cm) {
+	.navBar li p {
+		font-size: 75%;
+	}
+}
+
+.navBar li:hover p{
+	color: #4caf50;
+}
+
+.navBar li.active p{
+	color: #4caf50;
+}
+
+.navBar p {
+	height: 100%;
+	font-family: mainFont-Light;
+	text-transform: uppercase;
+}
+
+.center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.blueBorder {
+	border-style: solid;
+	border-color: blue;
+}
+.redBorder {
+	border-style: solid;
+	border-color: red;
+}
+
+.greenBorder {
+	border-style: solid;
+	border-color: green;
+}
+
+.fade.ng-hide {
+  	opacity: 0;
+}
