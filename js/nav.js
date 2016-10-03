@@ -4,7 +4,13 @@ var pages = ['#me', '#projects', '#skills'];
 $(document).ready(function() {
 	current_page = 0;
 	$('html, body').animate({scrollTop: $(pages[current_page]).offset().top}, 600);
+	$(".contact").on('click', '*', function(event) {
+			$(".contact").removeClass('active');
+			$(this).parent().addClass('active');
+	});
+
 });
+
 
 
 

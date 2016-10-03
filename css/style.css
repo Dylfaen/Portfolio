@@ -100,19 +100,25 @@ img.icon{
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-.contact {
+.contact-wrapper {
 	left: 0;
 }
 
-.contact div {
+
+
+.contact {
 	text-overflow: clip;
 	overflow: hidden;
+
+}
+
+.contact {
 	-ms-transition: width 0.5s ease;
 	-webkit-transition: width 0.5s ease;
 	transition: width 0.5s ease;
 }
 
-.contact div:hover {
+.contact.active {
 	width: 100%;
 }
 
@@ -125,17 +131,17 @@ img.icon{
 	line-height: 1em;
 }
 
-.network {
+.network-wrapper {
 	right: 0;
 }
 
-.network div {
+.network-wrapper div {
 	-webkit-transition: background-color 0.3s ease;
 	-ms-transition: background-color 0.3s ease;
 	transition: background-color 0.3s ease;
 }
 
-.network div:hover {
+.network-wrapper div:hover {
 	background-color: rgba(0, 0, 0, 0);
 }
 
@@ -192,7 +198,10 @@ img.icon{
 	top: 0px;
 	left: 0px;
 	visibility: visible;
-	background-color: black;
+}
+
+.blur {
+	filter: brightness(0.1);
 }
 
 #layer1 p {
@@ -203,4 +212,5 @@ img.icon{
 #layer2 {
 	visibility: visible;
 	z-index: 11;
+	transition: filter 0.5s ease;
 }
