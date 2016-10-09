@@ -4,9 +4,13 @@ var pages = ['#me', '#projects', '#skills'];
 $(document).ready(function() {
 	current_page = 0;
 	$('html, body').animate({scrollTop: $(pages[current_page]).offset().top}, 600);
-	$(".contact").on('click', '*', function(event) {
-			$(".contact").removeClass('active');
-			$(this).parent().addClass('active');
+	$(".contact .icon").on('click', function(event) {
+			if($(this).parent().hasClass('active')) {
+				$(this).parent().removeClass('active');
+			} else {
+				$(".contact").removeClass('active');
+				$(this).parent().addClass('active');
+			}
 	});
 
 });

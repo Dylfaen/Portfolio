@@ -90,12 +90,12 @@ img.icon{
 .icon-wrapper div {
 	display: flex;
 	flex-direction: row;
-	height: 2em;
-	width: 2em;
+	height: 4vh;
+	width: 4vh;
 	padding: 5px 5px;
 	border-style: solid;
 	border-width: 2px;
-	border-radius: 2em;
+	border-radius: 4vh;
 	border-color: white;
 	background-color: rgba(0, 0, 0, 0.3);
 }
@@ -109,17 +109,22 @@ img.icon{
 .contact {
 	text-overflow: clip;
 	overflow: hidden;
-
-}
-
-.contact {
 	-ms-transition: width 0.5s ease;
 	-webkit-transition: width 0.5s ease;
 	transition: width 0.5s ease;
+
+}
+
+.contact#phone {
+	max-width: 8em;
 }
 
 .contact.active {
 	width: 100%;
+}
+
+.contact.activ#phone {
+	width: 8em;
 }
 
 .contact p {
@@ -213,4 +218,8 @@ img.icon{
 	visibility: visible;
 	z-index: 11;
 	transition: filter 0.5s ease;
+}
+
+.border-red {
+	border: solid 1px red;
 }
