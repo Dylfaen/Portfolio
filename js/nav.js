@@ -8,7 +8,6 @@ $(document).ready(function() {
 			if($(this).parent().hasClass('active')) {
 				$(this).parent().removeClass('active');
 			} else {
-				$(".contact").removeClass('active');
 				$(this).parent().addClass('active');
 			}
 	});
@@ -21,7 +20,7 @@ $(document).ready(function() {
 var goNext = function() {
 	current_page = (current_page + 1) % pages.length;
 	console.log(current_page);
-	$('html, body').animate({scrollTop: $(pages[current_page]).offset().top}, 600)
+	$('html, body').animate({scrollTop: $(pages[current_page]).offset().top}, 300)
 	if(current_page == pages.length-1) {
 		console.log('up');
 		$('.scroll').removeClass('down');
