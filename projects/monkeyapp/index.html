@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+            -->
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" charset="utf-8">
+            <meta name="format-detection" content="telephone=no">
+            <meta name="msapplication-tap-highlight" content="no">
+            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+            <link rel="stylesheet" type="text/css" href="css/index.css">
+            <script src="node_modules/angular/angular.js"></script>
+            <script src="node_modules/angular-route/angular-route.js"></script>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
+            <title>Hello World</title>
+        </head>
+        <body ng-app="app" ng-controller="appController">
+            <div class="splash">
+                <img src="img/monkey.png">
+            </div> 
+
+            <div class="side-panel profile" ng-class="profileMenuState">
+                <div class="banner">
+                    <div id="profile-pic">
+                        <img src="img/profile.jpg">
+                    </div>
+                    <div id="profile-infos">
+                        <p>John Doe</p>
+                    </div>
+                </div> 
+                <div class="separator">
+                </div>
+                <div id="favorites-title">
+                    <p>Favoris</p>
+                </div>
+                <div class="favorites">
+                    <a class="promotion" href="#discount/0" ng-click="changeProfileMenuState()">
+                        <img ng-src="img/devredbanner.jpg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="side-panel category" ng-class="categoryMenuState">
+                <div class="menu-title">
+                    <h3>Catégories</h3>
+                </div>
+                <div class="separator">
+                </div>
+                <div class="menu-item">
+                    <a href="#home" ng-click="changeCategoryMenuState()">Home</a>
+                </div>
+                <div class="menu-item" ng-repeat="category in categories">
+                    <a href="#category/{{category.id}}" ng-click="changeCategoryMenuState()">{{category.name}}</a>
+                </div>
+            </div>
+
+            <div ng-view class="page-container">
+            </div>
+            <!--<div ng-class="{'visible': isAMenuOpen}" id="opacity85">
+            </div>-->
+            <div class="header row">
+                <div class="col-2">
+                  <button class="menu-button" ng-click="changeProfileMenuState()" id="profile-menu-button">
+                    <i class="material-icons">&#xE853;</i>
+                </button>
+            </div>
+            <div class="col-8">
+                <a href="#home">
+                    <img src="img/monkey-logo2.png">
+                </a>
+            </div>
+            <div class="col-2">
+                <button class="menu-button" ng-click="changeCategoryMenuState()" id="category-menu-button">
+                    <i class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </body>
+    </html>

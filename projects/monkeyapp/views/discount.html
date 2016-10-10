@@ -1,0 +1,19 @@
+
+<div class="page discount row">
+	<div class="banner">
+		<img ng-src="{{promotion.image}}">
+		<div class="description">
+			<div class='title'>Description</div>
+			<p>{{promotion.description}}</p>
+			<div class='title'>Adresse</div>
+			<p id="address">
+				{{promotion.storeAddress}}
+			</p>
+		</div>
+	</div>
+	<div class="action-bar">
+		<a href="#category/{{promotion.categoryID}}">
+			<i class="material-icons">&#xE5C4;</i>
+		</a>
+	</div>
+</div>

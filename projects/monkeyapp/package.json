@@ -1,0 +1,15 @@
+{
+  "name": "monkey",
+  "version": "1.0.0",
+  "description": "A good-deals and discounts app for Vannes, France",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0"
+  }
+}
